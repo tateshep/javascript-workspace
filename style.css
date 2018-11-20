@@ -1,0 +1,26 @@
+body {
+    font-family: monospace;
+    background-color: #333;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    color: yellowgreen;
+    background-image: url(heic1608a.jpg);
+}
+
+.body-container{    
+    width:80%;
+    margin-top: 50px;
+    margin-left:10%;
+    margin-right:10%;
+    opacity: .75; 
+}
+
+#results {
+    padding: 30px;
+    background-color: black;
+    border-color: yellowgreen;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 1.5em;
+}
