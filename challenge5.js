@@ -66,17 +66,31 @@ var billObject = {
 
 /*Create a function that caculates the average of an array by loooping through it, summing, and then dividing by total */
 
-var myArray = [0,88,29,39,48,75]
-
+var myArray = [1,1,1,3,3,3]
+var resultArray = 0 ;
 
 function avgArray (myArray) {
     
+    /*need to figure out how to get the resultArray to populate outside the function */
+    
+    var sumArray = 0;
+    
     for (var i = 0; i < myArray.length; i ++) {
-        console.log(i);
+        
+        sumArray += myArray[i];
+        
     }
     
+    var resultArray = sumArray/myArray.length;
+        
+    return resultArray;
 }
+
+
 avgArray(myArray);
+console.log(resultArray);
+
+
 /***** console.log statements *****
 *
 
