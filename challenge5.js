@@ -11,10 +11,14 @@ document.getElementById("results").innerHTML = "<p>John and his family went to 5
 }
 populateResults();   
 
+
+/*
 function cprint(myconsoleLog) {
     //Because I get sick of writing console.log
     console.log(myconsoleLog);
 }
+*/
+
 
 var billObject = {
     billArray : [ 124, 48, 268 , 180, 42 ],
@@ -62,18 +66,65 @@ var billObject = {
     }
 }
 
+//Mark's bill Object
+
+var markBillObject = {
+    billArray : [ 77, 375, 110 , 45],
+    tipArray : [] ,
+    finalAmount : [] ,
+    finalPaidArray : [] ,
+    
+    tipCalculator : function () {
+        
+        for (var i = 0; i < this.billArray.length ; i ++ ){
+                       
+            if (this.billArray[i] < 100) {
+            
+                //console.log('case1')
+                  
+                var tip = 0.2 * this.billArray[i];
+                var finalPaid  = tip + this.billArray[i];
+                this.tipArray.push(tip);
+                this.finalPaidArray.push(finalPaid)
+                
+            } else if (this.billArray[i] >= 100 && this.billArray[i] < 300) {
+             
+                //console.log('case2')
+
+                var tip = 0.10 * this.billArray[i];
+                var finalPaid  = tip + this.billArray[i];
+                this.tipArray.push(tip);
+                this.finalPaidArray.push(finalPaid)
+                
+            } else if (this.billArray[i] >= 300) {
+                    
+                //console.log('case3')
+
+                var tip = 0.25 * this.billArray[i];
+                var finalPaid  = tip + this.billArray[i];
+                this.tipArray.push(tip);
+                this.finalPaidArray.push(finalPaid)
+                
+            } else {
+                
+             return ' ERROR ';
+            }
+            //console.log(i);
+        }
+    }
+}
 
 
 /*Create a function that caculates the average of an array by loooping through it, summing, and then dividing by total */
 
-var myArray = [1,1,1,3,3,3]
-var resultArray = 0 ;
+var myArray = billObject.finalPaidArray;
 
 function avgArray (myArray) {
     
-    /*need to figure out how to get the resultArray to populate outside the function */
     
     var sumArray = 0;
+    var resultArray = 0 ;
+
     
     for (var i = 0; i < myArray.length; i ++) {
         
@@ -86,16 +137,34 @@ function avgArray (myArray) {
     return resultArray;
 }
 
-
-avgArray(myArray);
-console.log(resultArray);
-
-
-/***** console.log statements *****
-*
+/* Run the billObject.tipCalculator method for both Objects */
 
 billObject.tipCalculator();
-console.log('this is the tip Array : [' + billObject.tipArray+ ']');
-console.log('this is the final paid Array : [' + billObject.finalPaidArray + ']');
+markBillObject.tipCalculator();
 
-*/
+/* Run the avgArray Function for John's final paid */
+
+johnAvg = avgArray(billObject.finalPaidArray);
+console.log(johnAvg);
+
+markAvg = avgArray(markBillObject.finalPaidArray);
+console.log(markAvg);
+
+function whoPaidMost () {
+    if (johnAvg > markAvg) {
+    
+        console.log('John\'s family paid the most for dinner on vacay');
+    
+    }else {
+        console.log('Mark\'s family paid the most for dinner on vacay');
+    }
+
+}
+
+whoPaidMost();
+/* Reassign billOject.billArray and run the above for Mark's family */
+
+/* Run the avgArray Function for John's final paid */
+
+
+
