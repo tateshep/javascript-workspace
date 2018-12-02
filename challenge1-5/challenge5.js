@@ -69,7 +69,7 @@ var billObject = {
 //Mark's bill Object
 
 var markBillObject = {
-    billArray : [ 77, 375, 110 , 45],
+    billArray : [ 77, 475, 110 , 45],
     tipArray : [] ,
     finalAmount : [] ,
     finalPaidArray : [] ,
@@ -121,11 +121,9 @@ var myArray = billObject.finalPaidArray;
 
 function avgArray (myArray) {
     
-    
     var sumArray = 0;
     var resultArray = 0 ;
 
-    
     for (var i = 0; i < myArray.length; i ++) {
         
         sumArray += myArray[i];
