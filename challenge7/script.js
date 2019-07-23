@@ -23,6 +23,41 @@ c) correct answer (I would use a number for this)
 7. Suppose this code would be a plugin for other programmers to use in their code. So make sure that all your code is private and doesn't interfere with the other programmers code (Hint: we learned a special technique to do exactly that).
 */
 
-document.getElementById("problemId").textContent = "Coding Challenge 7";
+document.getElementById("problemId").textContent = "Testing...";
+
+
+
+
+function shuffleArray (array) {
+    var i = array.length,
+        j = 0,
+        temp ;
+    
+    while (true) {
+    
+        if (i===0) {
+            i = i - 1;
+            break;
+        }
+            i = i - 1;
+            j = Math.floor(Math.random() * (i+1));
+
+            // swap randomly chosen element with the current element
+            temp = array [i];
+            array[i] = array[j];
+            array[j] = temp;
+            console.log(array);
+    }
+    return array;
+}
+
+var ranNums = shuffleArray([1,2,3,4,5,6,7,8,9]);
+
+console.log(ranNums);
+
+
+
+
+
 
 

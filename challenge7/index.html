@@ -2,16 +2,34 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Coding Challenge | 7</title>       
-        <link href="style.css" rel="stylesheet" type="text/css">      
+        <title>CODING CHALLENGE | 7</title>       
+        <link href="style.css" rel="stylesheet" type="text/css">  
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" rel="stylesheet">
     </head>
     <body>
 
 <h1 id="problemId" style="display:inline"></h1>
         <div class="body-container">
-            <div id="results">       
+            <div id="results">
+                <h1 id="titleHeader"></h1>
+                
+                <div class="buttonDiv">
+                    <button class="questionBtn" style="display:none;">Ask Question</button>
+                </div>
+                
+                <div class="questionDiv">
+                    <p id ="questionParagraph"> Quiz in the Console</p>
+                    <div class="userChoice">
+                         <button class="choiceBtn" id="choiceBtn1" onclick="console.log('btn pressed');"></button>
+                         <button class="choiceBtn" id="choiceBtn2" onclick="choiceFunction(1)"></button>
+                         <button class="choiceBtn" id="choiceBtn3" onclick="choiceFunction(2)"></button>
+                         <button class="choiceBtn" id="choiceBtn4" onclick="choiceFunction(3)"></button>
+
+                    </div>
+                </div>
             </div>
         </div>
-    <script src="script.js"></script>
+    <script src="challenge7solution.js"></script>
     </body> 
 </html>

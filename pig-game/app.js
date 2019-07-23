@@ -64,7 +64,7 @@ document.querySelector('.btn-roll').addEventListener('click', function (){
         */
         previousRoll[0] = dice;
         previousRoll[1] = dice2;
-                    console.log(previousRoll);
+        console.log(previousRoll);
 
         if (previousRoll[0] === 6  && previousRoll[1] === 6){
             

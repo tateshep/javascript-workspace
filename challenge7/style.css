@@ -1,11 +1,43 @@
 body {
-    font-family: monospace;
+    font-family: 'Roboto Mono', monospace;
     background-color: #333;
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
-    color: yellowgreen;
-    background-image: url(heic1608a.jpg);
+    color: white;
+    background-image: url(A72gRM3.png);
+}
+
+#titleHeader {
+    
+    text-align: center;
+}
+
+.buttonDiv {
+    display:inline-block;
+    width:15%; 
+}
+
+.questionDiv {
+    display:inline-block;
+    padding-left:25px;
+    border-left-style: solid;
+    border-left-width:2px;
+    border-left-color:white;
+    width:80%;
+
+}
+
+.questionBtn {
+    
+    position:fixed;
+    top:300px;
+    
+    
+}
+
+.userChoice {
+    display:none;
 }
 
 button {
@@ -13,13 +45,23 @@ button {
     padding: 10px;
     border-style:solid;
     border-width:3px;
-    border-radius: 10px;
-    color: yellowgreen;
+    color: white;
 }
 
 button:hover {
     background-color:black;
+    transition-duration: 0.4s;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+    
 }
+
+button:active {
+    transform: translateY(4px);
+
+}
+
+
 .nav-item {
     display: inline;
     padding:5px;
@@ -29,15 +71,7 @@ button:hover {
     top:10px;
     
 }
-.nav-item:hover {
-    background-color: black;
-    border-bottom-style:solid;
-    
-}
-#nav-button {
-    display: block;
-    float:right;
-}
+
 
 #nav-bar {
     padding: 30px;
@@ -52,13 +86,7 @@ button:hover {
     top:0px;
     
 }
-#nav-animation {
-    position: absolute;
-    top:-100px;
-    width:250px;
-    height:75px;
-    background-color: aliceblue;
-}
+
 .body-container{    
     width:80%;
     margin-top: 100px;
@@ -70,9 +98,6 @@ button:hover {
 #results {
     padding: 30px;
     background-color: #333;
-    border-color: yellowgreen;
-    border-style: solid;
-    border-width: 1px;
-    font-size: 1.5em;
+    
 }
 
