@@ -4,7 +4,7 @@ import json
 
 from secrets import secret_key
 
-url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
+url = 'https://pro-api.coinmarketcap.com/v1/exchange/quotes/latest?id=2,16&convert=USD,BTC,LTC,EUR'
 parameters = {
     'start': '1',
     'limit': '100',
@@ -22,11 +22,7 @@ session.headers.update(headers)
 try:
     response = session.get(url, params=parameters)
     data = json.loads(response.text)
-    for i in range(0,len(data["data"])):
-        print("\n")
-        print(data["data"][i]["slug"],data["data"][i]["quote"]["USD"]['price'])
-    # print(len(data["data"]))
-    # print(len(data))
+    print(data)
 except (ConnectionError, Timeout, TooManyRedirects) as e:
     print(e)
 
