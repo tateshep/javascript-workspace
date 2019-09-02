@@ -1,2 +1,5 @@
 api-test/secrets.js
 api-test/secrets.py
+api-test/coinmarketcap/__pycache__/
+
+__pycache__/

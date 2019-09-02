@@ -4,7 +4,7 @@ import json
 
 from secrets import secret_key
 
-url = 'https://pro-api.coinmarketcap.com/v1/exchange/quotes/latest?id=2,16&convert=USD,BTC,LTC,EUR'
+url = 'https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/quotes/historical'
 parameters = {
     'start': '1',
     'limit': '100',
