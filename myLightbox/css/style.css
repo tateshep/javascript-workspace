@@ -88,6 +88,9 @@ html body {
 .thumbnail-controls-images {
     opacity: 0.5;
 }
-.active {
+.active,
+.thumbnail-controls-images:hover {
     opacity: 1;
+    transition: 0.6s ease;
+
 }
