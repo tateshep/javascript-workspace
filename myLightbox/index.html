@@ -15,33 +15,33 @@
       
         <div class="mySlides">
           <div class="numbertext">1/4</div>
-            <img src="images/img1.jpg" alt="">
+            <img class="" src="images/img1.jpg" alt="">
         </div>
 
         <div class="mySlides">
           <div class="numbertext">2/4</div>
-            <img src="images/img2.jpg" alt="">
+            <img class="" src="images/img2.jpg" alt="">
         </div>
 
         <div class="mySlides">
           <div class="numbertext">3/4</div>
-            <img src="images/img3.jpg" alt="">
+            <img class="" src="images/img3.jpg" alt="">
         </div>
 
         <div class="mySlides">
           <div class="numbertext">4/4</div>
-            <img src="images/img4.jpg" alt="">
+            <img class="" src="images/img4.jpg" alt="">
         </div>
 
-        <a class="next-btn">&#10095;</a>
-        <a class="prev-btn">&#10094;</a>
+        <a class="next-btn" onclick="plusSlides(1)">&#10095;</a>
+        <a class="prev-btn" onclick="plusSlides(-1)">&#10094;</a>
 
       <!-- Thumbnail controls -->
         <div class="thumbnail-controls">
-          <img src="images/img1.jpg" height="100px" alt="">
-          <img src="images/img2.jpg" height="100px" alt="">
-          <img src="images/img3.jpg" height="100px" alt="">
-          <img src="images/img4.jpg" height="100px" alt="">
+          <img class="my-images" src="images/img1.jpg" height="100px" alt="">
+          <img class="my-images" src="images/img2.jpg" height="100px" alt="">
+          <img class="my-images" src="images/img3.jpg" height="100px" alt="">
+          <img class="my-images" src="images/img4.jpg" height="100px" alt="">
         </div>
 
       </div>
@@ -49,24 +49,27 @@
     </div>
     <!--End Modal, hidden at first -->
 
-    <div class="my-images">
-      <img src="images/img1.jpg" height="100px"alt="">
-    </div>
-
-    <div class="my-images">
-      <img src="images/img2.jpg" height="100px"alt="">
-    </div>
-
-   <div class="my-images">
-      <img src="images/img3.jpg" height="100px"alt="">
-    </div>
-
-   <div class="my-images">
-      <img src="images/img4.jpg" height="100px"alt="">
-    </div>
-
 
     <!-- Images used to open modal -->    
+
+    <div class="open-modal-img">
+      <img class=""src="images/img1.jpg" onclick="currentSlide(parseInt(this.id))" height="100px"alt="">
+    </div>
+
+    <div class="open-modal-img">
+      <img class=""src="images/img2.jpg" onclick="currentSlide(parseInt(this.id))" height="100px"alt="">
+    </div>
+
+   <div class="open-modal-img">
+      <img class=""src="images/img3.jpg" onclick="currentSlide(parseInt(this.id))" height="100px"alt="">
+    </div>
+
+   <div class="open-modal-img">
+      <img class=""src="images/img4.jpg" onclick="currentSlide(parseInt(this.id))" height="100px"alt="">
+    </div>
+
+
+    <!-- End Images used to open modal -->    
 
     <script src="app.js"></script>
   </body>
