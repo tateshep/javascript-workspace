@@ -17,12 +17,19 @@ html body {
 
 .modal-content {
     position: relative;
-    margin: auto;
+    margin-left:10px;
     padding: 0;
     width: 90%;
     max-width: 1200px;
 }
-
+.responsive-img {
+    width: 100%;
+    height:auto;
+    overflow: hidden;
+}
+.numbertext {
+    color:white;
+}
 .close-btn {
     color: white;
     position: absolute;
@@ -76,4 +83,11 @@ html body {
 .thumbnail-controls {
     display: flex;
     justify-content: space-around;
+}
+
+.thumbnail-controls-images {
+    opacity: 0.5;
+}
+.active {
+    opacity: 1;
 }
