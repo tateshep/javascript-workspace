@@ -1,22 +1,18 @@
 
 
 var lightboxModal = document.getElementById('myModal')
-var closeBtn = document.querySelector('.close-btn');
 var thumbnailControlsImages = Array.from(document.getElementsByClassName("thumbnail-controls-images"));
 var mySlides = Array.from(document.getElementsByClassName('mySlides'));
 var openModalImg = Array.from(document.getElementsByClassName("open-modal-img"));
+var closeBtn = document.querySelector('.close-btn');
 
 var slideIndex = 1;
 
 openModalImg.forEach(function(element, index) {
     element.firstElementChild.id = parseInt(index) + 1;
-    // element.addEventListener('click',currentSlide);
 });
 thumbnailControlsImages.forEach(function(element, index) {
     element.id = parseInt(index) + 1;
-
-    // element.id = 'thumbnail-' + toString(parseInt(index) + 1);
-    // element.addEventListener('click',currentSlide);
 });
 
 showSlides(1);
